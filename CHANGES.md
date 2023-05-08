@@ -1,3 +1,38 @@
+### 1.7.0 版本
+* 样式调整
+  * 新增：统计数据 
+  * 优化：概述样式调整 
+
+### 1.6.3 版本
+* 修复：email发送邮件提示：`STARTTLS extenstion not supported by server`，增加 tls 开关 
+* 修复：HTML报告提示：handler ID 删除错误 
+
+### 1.6.2 版本
+* 修复`seldom/loguru`使用XTestRunner 日志错误
+* HTML报告：修改 skip class/case 样式颜色 
+
+### 1.6.1 版本
+* 紧急修复 jinja2 版本依赖问题，升级jinja2=^3.1.2 版本
+
+### 1.6.0 版本
+* XML报告
+  * 支持 `rerun` 重跑参数。
+  * 修复 `subTest` 用例统计错误问题。
+* HTML报告
+  * 移除 `save_last_run` 参数， ⚠️ 不兼容修改。
+  * 修改 `rerun` 传参位置，只保留最后执行结果， ⚠️ 不兼容修改。
+  * 修复 error 用例统计错误。
+* 邮件：支持SMTP_SSL和 SMTP, 增加`ssl`参数，详情查看文档。感谢 @wu-clan
+* 微信：优化代码，提供`send_weixin()`方法，详情查看文档。
+* 打包：`pyproject.toml` 替换 `setup.py` 感谢 @wu-clan
+
+### 1.5.0 版本
+
+* 新增飞书推送，感谢 @yingzi(3011456083@qq.com)
+* 新增微信推送，感谢 @Yingqing Shan(yingqing.shan@sayweee.com)
+* 修复：邮件发送错误： `smtplib.SMTP_SSL()` 改为 `smtplib.SMTP()`。
+* 修复：测试类统计错误：测试类没有统计`跳过`的用例。
+
 ### 1.4.6 版本
 
 * 修复 AttributeError 异常
